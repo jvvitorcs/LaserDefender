@@ -55,5 +55,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5008c4d3c37a0714583abbfa607987c7, type: 2}
   startingWave: 0
   waveCounter: 0
-  enemies: 0
-  bosswave: 1
+  enemies: 1
+  bosswave: 0

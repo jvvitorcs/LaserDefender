@@ -2,41 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPathing : MonoBehaviour {
-	WaveConfig waveConfig;
-	List<Transform> wayPoints;
-	int waypointIndex = 0;
+public class EnemyPathing : MonoBehaviour
+{
+    WaveConfig waveConfig;
+    List<Transform> wayPoints;
+    int waypointIndex = 0;
+    [Header("Boss")]
+    [SerializeField] GameObject boss = null;
 
-	void Start () {
-		wayPoints = waveConfig.GetWayPoints();
-		transform.position = wayPoints[waypointIndex].transform.position;
-	}
+    void Start()
+    {
+        wayPoints = waveConfig.GetWayPoints();
+        transform.position = wayPoints[waypointIndex].transform.position;
+    }
 
-	void Update ()
-	{
-		Move();
-	}
+    void Update()
+    {
+        Move();
+    }
 
-	public void SetWaveConfig(WaveConfig waveConfig){
-		this.waveConfig = waveConfig;		
-	}
+    public void SetWaveConfig(WaveConfig waveConfig)
+    {
+        this.waveConfig = waveConfig;
+    }
 
-	private void Move()
-	{
-		if (waypointIndex <= wayPoints.Count - 1)
-		{
-			var targetPosition = wayPoints[waypointIndex].transform.position;
-			var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
-			transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
+    private void Move()
+    {
+        if (waypointIndex <= wayPoints.Count - 1)
+        {
+            var targetPosition = wayPoints[waypointIndex].transform.position;
+            var movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementThisFrame);
 
-			if (transform.position == targetPosition)
-			{
-				waypointIndex++;
-			}
-		}
-		else
-		{
-			Destroy(gameObject);
-		}
-	}
+            if (transform.position == targetPosition)
+            {
+                waypointIndex++;
+            }
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }    
 }

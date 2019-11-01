@@ -7,8 +7,8 @@ public class EnemySpawner : MonoBehaviour
 
     [SerializeField] List<WaveConfig> waveConfigs, waveBoss, spawnBossList;
     [SerializeField] int startingWave = 0, waveCounter = 0;
-    
-    public bool enemies = false, bosswave = false;
+    float time = 10;
+    public bool enemies = false, bosswave = false, countdown;
 
     IEnumerator Start()
     {
@@ -26,6 +26,10 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         WaveCounts();
+        if(countdown == true)
+        {
+            time -= Time.deltaTime;
+        }
     }
 
     void WaveCounts()
@@ -96,6 +100,7 @@ public class EnemySpawner : MonoBehaviour
             var newEnemy = Instantiate(waveConfig.GetEnemyPrefab(), waveConfig.GetWayPoints()[0].transform.position, Quaternion.identity);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);
             StopCoroutine(SpawnBoss());
+            countdown = true;
             yield return null;
         }
     }

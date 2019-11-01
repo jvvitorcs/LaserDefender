@@ -306,7 +306,7 @@ PrefabInstance:
     - target: {fileID: 114077311033717786, guid: 6afd0c22ffffdc14a8dbc7bd090ed136,
         type: 3}
       propertyPath: health
-      value: 900000
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6afd0c22ffffdc14a8dbc7bd090ed136, type: 3}
@@ -1445,50 +1445,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: waveBoss.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: spawnBossList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: bosswave
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: enemies
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: waveBoss.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: df60ba211a0a592418c3403dd58c721f,
-        type: 2}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: waveBoss.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 573aaa6d516936b48a299666b8791e58,
-        type: 2}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: boss
-      value: 
-      objectReference: {fileID: 1760267311595466, guid: 767f18657671e8343aedf5dd9e99c2cb,
-        type: 3}
-    - target: {fileID: 2005665709942305416, guid: 2327215426139294e940baaddbf6acaf,
-        type: 3}
-      propertyPath: spawnBossList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 5008c4d3c37a0714583abbfa607987c7,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2327215426139294e940baaddbf6acaf, type: 3}
 --- !u!1001 &7412209041747628331

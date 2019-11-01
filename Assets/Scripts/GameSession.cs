@@ -26,15 +26,7 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
-
-   /*void Update()
-    {
-        if(score == 3000)
-        {
-            
-
-        }
-    }*/
+ 
 
     public int GetScore()
     {
